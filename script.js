@@ -1,37 +1,36 @@
-// List of all PNG pages in your repository
+// List your PNG page files here
 const pages = [
-    'page1-option1.png',
-    'page1-option2.png',
-    'page1-option3.png',
-    'page2.png',
-    'page3.png',
-    'page4.png'
-    // Add more file names here if you upload more!
+  "page1-option1.png",
+  "page1-option2.png",
+  "page1-option3.png",
+  "page2.png",
+  "page3.png",
+  "page4.png"
+  // Add more PNG filenames here as you upload them!
 ];
 
-let pageFlip = null;
+document.addEventListener("DOMContentLoaded", function() {
+  const pageFlip = new St.PageFlip(document.getElementById("book"), {
+    width: 400,
+    height: 550,
+    size: "stretch",
+    minWidth: 320,
+    minHeight: 420,
+    maxWidth: 600,
+    maxHeight: 800,
+    showCover: true,
+    mobileScrollSupport: true,
+    controlsProps: {
+      // This will show arrows for navigation
+      nextBtn: true,
+      prevBtn: true,
+    },
+  });
 
-function openBook() {
-    document.getElementById('landing').style.display = 'none';
-    document.getElementById('flipbook').style.display = 'block';
+  const images = pages.map(src => ({
+    type: 'image',
+    src: src
+  }));
 
-    pageFlip = new St.PageFlip(document.getElementById('flipbook'), {
-        width: 700,
-        height: 500,
-        size: 'stretch',
-        minWidth: 320,
-        minHeight: 420,
-        maxWidth: 1000,
-        maxHeight: 1400,
-        showCover: true,
-        mobileScrollSupport: true
-    });
-
-    // Prepare pages for pageflip
-    const images = pages.map(src => ({
-        type: 'image',
-        src: src
-    }));
-
-    pageFlip.loadFromImages(images);
-}
+  pageFlip.loadFromImages(images);
+});
