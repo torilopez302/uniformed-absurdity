@@ -1,32 +1,28 @@
 body {
-    background: #181a1b;
-    color: #fff;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
+  background: #181a1b;
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#book-container {
-    text-align: center;
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-#cover-image {
-    width: 320px;
-    height: 420px;
-    object-fit: cover;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.6);
-    cursor: pointer;
-    border-radius: 8px;
-}
-
-#flipbook {
-    margin: auto;
-    width: 700px;
-    height: 500px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.7);
-    border-radius: 10px;
+#book {
+  width: 400px;
+  height: 550px;
+  margin: 0 auto;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.7);
+  border-radius: 12px;
+  background: #222;
 }
