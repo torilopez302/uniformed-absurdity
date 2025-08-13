@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uniformed Absurdity - Interactive Book</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- PageFlip CSS from CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/stpageflip/dist/pageflip.css">
+</head>
+<body>
+    <div id="book-container">
+        <div id="landing" onclick="openBook()">
+            <img src="page1-option1.png" alt="Click to open book" id="cover-image">
+            <p>Click the book to begin</p>
+        </div>
+        <div id="flipbook" style="display:none;">
+            <!-- Book will appear here -->
+        </div>
+    </div>
+    <script src="https://unpkg.com/stpageflip/dist/pageflip.browser.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
